@@ -54,7 +54,7 @@ Users should be able to:
 
 - There was some form text and radio inputs inside a grid layout. this part was challenging.
 
-- Positioning the header, main and footer was also chllenging.
+- Positioning the header, main and footer was also challenging.
 
 - On the JS There is two part. One for validation of the inputs and enabling or disabling for reset button. And one for calculating bill based on tips and number of people and updating values
 
