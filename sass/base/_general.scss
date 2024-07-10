@@ -2,17 +2,46 @@
 
 body {
   font-family: $font-family-base;
-  font-weight: $font-weight-default;
+  font-weight: $font-weight-bold;
   font-size: $font-size-400;
-  color: $color-neutral-1000;
-  background-color: $color-neutral-000;
+  color: $color-neutral-600;
+  background-color: $color-neutral-300;
   line-height: 1.5;
+
+  display: flex;
+  flex-direction: column;
 }
 
-a {
-  color: $color-accent-300;
+.header {
+  padding-block: $size-10;
+
+  @include mq(medium) {
+    margin-block-start: $size-15;
+    margin-block-end: $size-12;
+  }
 }
 
-a:is(:hover, :focus) {
-  color: $color-primary-300;
+main {
+  flex-grow: 1;
+  display: grid;
+  @include mq(medium) {
+    margin-block-end: $size-4;
+    flex-grow: 0;
+  }
 }
+
+footer {
+  background-color: $color-neutral-100;
+  margin-top: auto;
+  @include mq(medium) {
+    background-color: transparent;
+  }
+}
+
+// a {
+//   color: $color-accent-300;
+// }
+
+// a:is(:hover, :focus) {
+//   color: $color-primary-300;
+// }

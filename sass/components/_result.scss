@@ -1,0 +1,45 @@
+@use "../abstracts/" as *;
+
+.results-section {
+  background-color: $color-neutral-900;
+  color: $color-neutral-100;
+  margin-block-end: $size-8;
+  margin-inline: $size-6;
+  padding: $size-9 $size-6 $size-6;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+
+  @include mq(medium) {
+    margin: $size-8 $size-8 $size-8 0;
+    padding: $size-9;
+  }
+}
+
+.result-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:nth-child(2) {
+    margin-top: $size-5;
+
+    @include mq(medium) {
+      margin-top: $size-9;
+    }
+  }
+}
+
+.result-label {
+  span {
+    display: block;
+    font-size: $font-size-300;
+    color: $color-neutral-500;
+  }
+}
+
+.result-output {
+  font-size: $font-size-800;
+  color: $color-primary-400;
+  line-height: 1.1;
+}

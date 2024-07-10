@@ -2,38 +2,188 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Mentor | Tip calculator app</title>
     <script type="module" src="/main.js"></script>
     <link rel="stylesheet" href="/sass/main.scss" />
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
 
   <body>
-    Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-    person Total / person Reset
+    <header class="header">
+      <a href="#" aria-label="Splitter - Home"></a
+      ><img class="mx-auto" src="assets/images/logo.svg" alt="" />
+    </header>
 
-    <div class="attribution">
+    <main>
+      <h1 class="visually-hidden">Splitter</h1>
+      <div class="container | bg-neutral-100 border-radius-3 box-shadow-1">
+        <form action="#">
+          <div class="even-columns">
+            <div class="form-section">
+              <div class="form-group">
+                <label for="bill-amount">Bill</label>
+                <input
+                  type="number"
+                  id="bill-amount"
+                  class="form-input"
+                  min="0"
+                  step="any"
+                  data-icon="bill"
+                  placeholder="0"
+                  aria-invalid="false"
+                  aria-describedby="bill-error"
+                />
+                <p
+                  class="error-message bill hidden"
+                  id="bill-error"
+                  aria-live="assertive"
+                >
+                  Can't be zero
+                </p>
+              </div>
+              <div class="form-group">
+                <label for="tip-percentage" class="form-label"
+                  >Select Tip %</label
+                >
+                <div class="tip-options">
+                  <div class="tip-option">
+                    <input
+                      type="radio"
+                      name="tip"
+                      id="tip-5"
+                      class="tip-radio"
+                      value="5"
+                    />
+                    <label for="tip-5" class="tip-label">5%</label>
+                  </div>
+                  <div class="tip-option">
+                    <input
+                      type="radio"
+                      name="tip"
+                      id="tip-10"
+                      class="tip-radio"
+                      value="10"
+                    />
+                    <label for="tip-10" class="tip-label">10%</label>
+                  </div>
+                  <div class="tip-option">
+                    <input
+                      type="radio"
+                      name="tip"
+                      id="tip-15"
+                      class="tip-radio"
+                      value="15"
+                    />
+                    <label for="tip-15" class="tip-label">15%</label>
+                  </div>
+                  <div class="tip-option">
+                    <input
+                      type="radio"
+                      name="tip"
+                      id="tip-25"
+                      class="tip-radio"
+                      value="25"
+                    />
+                    <label for="tip-25" class="tip-label">25%</label>
+                  </div>
+                  <div class="tip-option">
+                    <input
+                      type="radio"
+                      name="tip"
+                      id="tip-50"
+                      class="tip-radio"
+                      value="50"
+                    />
+                    <label for="tip-50" class="tip-label">50%</label>
+                  </div>
+                  <div class="tip-custom">
+                    <label for="custom-tip" class="visually-hidden"
+                      >Custom</label
+                    >
+                    <input
+                      type="number"
+                      id="custom-tip"
+                      class="custom-tip-input"
+                      min="0"
+                      step="any"
+                      max="100"
+                      placeholder="Custom"
+                      aria-invalid="false"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="number-of-people">Number of People</label>
+                <input
+                  type="number"
+                  id="number-of-people"
+                  class="form-input"
+                  min="0"
+                  step="1"
+                  data-icon="people"
+                  placeholder="0"
+                  aria-invalid="false"
+                  aria-describedby="people-error"
+                />
+                <p
+                  class="error-message people hidden"
+                  id="people-error"
+                  aria-live="assertive"
+                ></p>
+              </div>
+            </div>
+            <div class="results-section">
+              <div class="result-group">
+                <p class="result-label" id="tip-amount-label">
+                  Tip Amount <span class="result-subtext">/ person</span>
+                </p>
+                <output
+                  class="result-output"
+                  id="tip-amount"
+                  aria-labelledby="tip-amount-label"
+                  aria-live="polite"
+                  >$0.00</output
+                >
+              </div>
+              <div class="result-group">
+                <p class="result-label" id="total-amount-label">
+                  Total <span class="result-subtext">/ person</span>
+                </p>
+                <output
+                  class="result-output"
+                  id="total-amount"
+                  aria-labelledby="total-amount-label"
+                  aria-live="polite"
+                  >$0.00</output
+                >
+              </div>
+              <button type="submit" class="button">Reset</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="fs-200 text-center">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      <a
+        class="clr-primary-400"
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Kamran Kiani</a>.
-    </div>
+      >. Coded by
+      <a
+        class="clr-primary-400"
+        href="https://www.frontendmentor.io/profile/kaamiik"
+        >Kamran Kiani</a
+      >.
+    </footer>
   </body>
 </html>
