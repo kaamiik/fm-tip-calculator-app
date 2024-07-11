@@ -10,6 +10,7 @@ const errorMessageBill = document.querySelector(".error-message.bill");
 const errorMessagePeople = document.querySelector(".error-message.people");
 const resetButton = document.querySelector(".button");
 const form = document.querySelector("form");
+const liveResult = document.querySelector("#live-result");
 
 let bill = 0;
 let people = 1;
@@ -37,6 +38,10 @@ const calculateTip = (bill, tipPercentage, people) => {
 const updateDisplayValues = (tip, people) => {
   tipAmount.value = `$${tip.toFixed(2)}`;
   totalAmount.value = `$${((bill + tip) / people).toFixed(2)}`;
+
+  liveResult.textContent = `Tip Amount per person: $${tip.toFixed(
+    2
+  )}, Total per person: $${((bill + tip) / people).toFixed(2)}`;
 };
 
 const updateValues = () => {

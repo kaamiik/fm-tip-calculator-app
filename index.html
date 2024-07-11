@@ -141,7 +141,6 @@
                   class="result-output"
                   id="tip-amount"
                   aria-labelledby="tip-amount-label"
-                  aria-live="polite"
                   >$0.00</output
                 >
               </div>
@@ -153,10 +152,14 @@
                   class="result-output"
                   id="total-amount"
                   aria-labelledby="total-amount-label"
-                  aria-live="polite"
                   >$0.00</output
                 >
               </div>
+              <div
+                class="visually-hidden"
+                id="live-result"
+                aria-live="polite"
+              ></div>
               <button type="reset" class="button">Reset</button>
             </div>
           </div>
