@@ -20,6 +20,8 @@ h3,
 h4,
 p,
 figure,
+fieldset,
+legend,
 blockquote,
 dl,
 dd {
@@ -68,6 +70,11 @@ textarea,
 select {
   font-family: inherit;
   font-size: inherit;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
 }
 
 /* Chrome, Safari, Edge, Opera */

@@ -16,12 +16,13 @@
 
   <body>
     <header class="header">
-      <a href="#" aria-label="Splitter - Home"></a
-      ><img class="mx-auto" src="assets/images/logo.svg" alt="" />
+      <a href="#" aria-label="Splitter - Home"
+        ><img class="mx-auto" src="assets/images/logo.svg" alt=""
+      /></a>
     </header>
 
     <main>
-      <h1 class="visually-hidden">Splitter</h1>
+      <h1 class="visually-hidden">Splitter Tip Calculator App</h1>
       <div class="container | bg-neutral-100 border-radius-3 box-shadow-1">
         <form action="#">
           <div class="even-columns">
@@ -39,16 +40,12 @@
                   aria-invalid="false"
                   aria-describedby="bill-error"
                 />
-                <p
-                  class="error-message bill hidden"
-                  id="bill-error"
-                  aria-live="assertive"
-                >
-                  Can't be zero
-                </p>
+                <div id="bill-error" aria-live="assertive">
+                  <p class="error-message bill hidden">Can't be zero</p>
+                </div>
               </div>
-              <div class="form-group">
-                <p class="form-label">Select Tip %</p>
+              <fieldset class="form-group">
+                <legend class="form-label">Select Tip %</legend>
                 <div class="tip-options" id="tip-percentage">
                   <div class="tip-option">
                     <input
@@ -116,7 +113,7 @@
                     />
                   </div>
                 </div>
-              </div>
+              </fieldset>
               <div class="form-group">
                 <label for="number-of-people">Number of People</label>
                 <input
@@ -130,11 +127,9 @@
                   aria-invalid="false"
                   aria-describedby="people-error"
                 />
-                <p
-                  class="error-message people hidden"
-                  id="people-error"
-                  aria-live="assertive"
-                ></p>
+                <div id="people-error" aria-live="assertive">
+                  <p class="error-message people hidden"></p>
+                </div>
               </div>
             </div>
             <div class="results-section">
@@ -162,7 +157,7 @@
                   >$0.00</output
                 >
               </div>
-              <button type="submit" class="button">Reset</button>
+              <button type="reset" class="button">Reset</button>
             </div>
           </div>
         </form>
@@ -175,11 +170,13 @@
         class="clr-primary-400"
         href="https://www.frontendmentor.io?ref=challenge"
         target="_blank"
+        aria-label="Frontend Mentor (opens in a new window)"
         >Frontend Mentor</a
       >. Coded by
       <a
         class="clr-primary-400"
         href="https://www.frontendmentor.io/profile/kaamiik"
+        aria-label="Kamran Kiani's profile (opens in a new window)"
         >Kamran Kiani</a
       >.
     </footer>

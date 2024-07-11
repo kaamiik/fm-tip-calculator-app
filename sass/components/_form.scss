@@ -22,6 +22,10 @@
   }
 }
 
+fieldset > div {
+  margin-top: $size-4;
+}
+
 .form-input,
 .custom-tip-input {
   border: none;
